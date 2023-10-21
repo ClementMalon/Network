@@ -15,9 +15,8 @@ server_port = 12345
 # Create a socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Set a timeout for socket operations (e.g., 5 seconds)
-timeout = 5
-client_socket.settimeout(timeout)
+# Packet loss Handling Method
+client_socket.settimeout(5)
 
 # Connect to the server
 client_socket.connect((server_ip, server_port))
